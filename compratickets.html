@@ -34,7 +34,7 @@
                       <a class="nav-link active " style="color: white;" aria-current="page" >Conviérte en orador</a>
                     </li>
                     <li class="nav-item "   >
-                        <a class="nav-link " style="color: rgb(10, 160, 10)" href="compratickets.html">Comprar tickets</a>
+                        <a class="nav-link " style="color: rgb(10, 160, 10)" href="./compratickets.html">Comprar tickets</a>
                       </li>
                   </ul>
              </div>
@@ -94,48 +94,53 @@
 
 <div class="mt-3"  style="  text-align:center ">
     <p>VENTA </p>
-    <h2 id="entradaGeneral">VALOR DE TICKETS $200 </H2>
+    <h2 > VALOR DE TICKETS $200 </H2>
 </div>
 
 <div class="container w-50 pb-3">
   <div class="row g-2">
-
       <div class="col-md-6 input-group-sm">
         <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+        <p id="completar-nombre" class="incompleto"></p>
       </div>
       <div class="col-md-6 input-group-sm">
         <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+        <p id="completar-apellido" class="incompleto"></p>
       </div>
 
       <div class="col-12 input-group-sm mt-3">
           <input type="text" class="form-control" id="email" placeholder="Correo">
+          <p id="completar-email" class="correo"></p>
       </div>
 
       <div class="col-md-6 input-group-sm mt-3">
           <label for="text" class="form-label">Cantidad</label>
-
-          <input onchange="cantidad()" type="text" class="form-control" id="cantidad" placeholder="Cantidad">
+          
+          <input type="number" class="form-control" id="cantidad" placeholder="cantidad">
+          <p id="completar-cantidad" class="cantidad"></p>
       </div>
       <div class="col-md-6 input-group-sm mt-3">
           <label for="text" class="form-label">Categoría</label>
-
-          <select onchange="categoria()" class="form-select" aria-label="categoria" id="categoria">
+          
+          <select class="form-select" aria-label="categoria" id="categoria">
               <option selected>Elegir categoría</option>
               <option value="estudiante">Estudiante</option>
               <option value="trainee">Trainee</option>
               <option value="junior">Junior</option>
             </select>
+            <p id="completar-categoria" class="categoria"></p>
       </div>
       
       <div class="col-12 mt-3 p-2 ps-3 pe-3 bg-info rounded border border-info" style="--bs-bg-opacity: .2">
-            Total a pagar: $ <span id="total">0</span> 
+            Total a pagar: $ <span id="totalApagar">0</span> 
       </div>
       
       <div class="col-6">
-        <button onclick="reset()" type="text" class="btn btn-success boton-form text-light w-100 " id="borrar">Borrar</button>
+        <button onclick="reset()" type="text" class="btn btn-success boton-form text-light w-100 ">Borrar</button>
       </div>
       <div class="col-6">
-        <button onclick="resumen()" type="text" class="btn btn-success boton-form text-light w-100 " id="resumen">Resumen</button>
+        <button onclick="resumen()" type="text" class="btn btn-success boton-form text-light w-100 " >Resumen</button>
+        <p id="resumen" > </p>
       </div>
   </div>
 </div>
